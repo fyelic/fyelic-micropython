@@ -12,7 +12,7 @@ Notes : LEDs are polarized! The longer end (+) should be connected to the pin
 
 from picozero import LED
 
-led = LED(15)
+led = LED(15)  # set LED pin to 15
 
 while True:
-    led.blink()
+    led.blink()  # LED in blink mode

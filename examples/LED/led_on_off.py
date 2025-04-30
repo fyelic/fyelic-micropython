@@ -13,10 +13,10 @@ Notes : LEDs are polarized! The longer end (+) should be connected to the pin
 from picozero import LED
 from time import sleep_ms
 
-led = LED(15)
+led = LED(15)  # set LED pin to 15
 
 while True:
     led.on()
-    sleep_ms(1000)
+    sleep_ms(1000)  # 1000 ms delay
     led.off()
     sleep_ms(1000)
