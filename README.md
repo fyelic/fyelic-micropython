@@ -8,6 +8,8 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 - [How to Use](#how-to-use)
 - [Popular Links](#popular-links)
 - [Download Instructions](#download-instructions)
+- [Bonus Pico Tips](#pico-tips)
+  - [Using a Power Supply](#using-a-power-supply)
 - [Board Setup](#board-setup)
 
 # About
@@ -17,6 +19,28 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 # Popular Links
 
 # Download Instructions
+
+# Pico Tips
+
+This section contains additional notes on using a Raspberry Pi Pico.
+
+## Using a Power Supply
+
+If you want to run your Raspberry Pi Pico without it being attached to your computer, you can use a power supply. FYELIC offers a 2.5A Power Supply that can be plugged into a wall, or you can use a USB power bank.
+
+To automatically run a MicroPython program when the Pico powers up, you can save it to the Pico with the name `main.py`
+
+In Thonny, make sure your program isn't running by pressing 'Stop'.
+
+Click on the **File** menu and then **Save as** for the last program you wrote. Or you can open a previously saved file and follow the same process to rename the file.
+
+When prompted, select ‘Raspberry Pi Pico’ from the pop-up menu asking where you want to save the file to.
+
+Name your file `main.py`
+
+You can now disconnect your Raspberry Pi Pico from your computer and use a micro USB cable to connect it to your power source.
+
+Once connected, the `main.py` file should run automatically.
 
 # Board Setup
 
