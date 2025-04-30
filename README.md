@@ -53,6 +53,7 @@ Thonny is a free and open-source integrated development environment for Python t
 In a web browser, navigate to [thonny.org](https://thonny.org/).
 
 In the top right-hand corner of the browser window, you will see download links for Windows and macOS, and instructions for Linux.
+
 ![thonny download](reference_images/thonnydownload.png)
 
 Download the relevant files and run them to install Thonny.
