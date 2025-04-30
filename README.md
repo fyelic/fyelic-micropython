@@ -22,7 +22,7 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 
 This guide is based on this tutorial [Getting Started with Raspberry Pi Pico](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/0) with additional guidance.
 
-### Download Thonny
+## Download Thonny
 
 Thonny is a free and open-source integrated development environment for Python that is designed for beginners.
 
@@ -35,7 +35,7 @@ Download the relevant files and run them to install Thonny.
 
 **Note:** Do not open Thonny yet.
 
-### Add the MicroPython firmware.
+## Add the MicroPython firmware.
 
 Find the BOOTSEL button on your Raspberry Pi Pico.
 ![bootsel button](reference_images/bootsel.png)
@@ -67,7 +67,7 @@ Wait for the installation to complete and click **Close**.
 
 You don’t need to update the firmware every time you use your Raspberry Pi Pico. Next time, you can just plug it into your computer without pressing the ‘BOOTSEL’ button.
 
-### Blink the Onboard LED.
+## Blink the Onboard LED.
 
 Use the Thonny Shell to run some simple Python code on your Raspberry Pi Pico.
 
@@ -108,7 +108,7 @@ To turn off the LED, you can enter this line in the Shell:
 pico_led.off()
 ```
 
-### Write a longer program.
+## Write a longer program.
 
 The Shell is useful to make sure everything is working and try out quick commands. However, it’s better to put longer programs in a file.
 
@@ -132,7 +132,7 @@ Click **Run** (the green play button) and the LED will blink on and off.
 
 Click the **Stop** (the red stop sign) button.
 
-### Save your program to your Pico
+## Save your program to your Pico
 
 Make sure you have Stopped the program, then click the ‘Save’ icon, or choose ‘Save’ from the ‘File’ menu.
 
