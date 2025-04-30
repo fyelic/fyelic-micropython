@@ -49,9 +49,11 @@ Open Thonny. It should look something like this:
 In the bottom right corner of the Thonny window, you will see the interpreter used to run the code you write in Thonny.
 
 By default, Thonny uses the interpreter on the ‘Local’ computer (the one running Thonny).
+
 ![local interpreter](reference_images/localinterpreter.png)
 
 Click the Python interpreter and select Install MicroPython.
+
 ![install MicroPython](reference_images/installmicropython.png)
 
 A dialog box will pop up to install the latest version of the MicroPython firmware on your Raspberry Pi Pico.
@@ -135,6 +137,7 @@ Click the **Stop** (the red stop sign) button.
 Make sure you have Stopped the program, then click the ‘Save’ icon, or choose ‘Save’ from the ‘File’ menu.
 
 Thonny will give you the option to save the file on **This computer**, or the **Raspberry Pi Pico**.
+
 ![save options](reference_images/saveoptions.png)
 
 Choose either save option, but make sure that your filename ends with the `.py` extension so that it's recognized as a Python file.
