@@ -10,6 +10,7 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 - [Download Instructions](#download-instructions)
 - [Bonus Pico Tips](#pico-tips)
   - [Using a Power Supply](#using-a-power-supply)
+  - [Wiring Diagrams with Fritzing](#wiring-diagrams-with-fritzing)
 - [Board Setup](#board-setup)
 
 # About
@@ -41,6 +42,8 @@ Name your file `main.py`
 You can now disconnect your Raspberry Pi Pico from your computer and use a micro USB cable to connect it to your power source.
 
 Once connected, the `main.py` file should run automatically.
+
+## Wiring Diagrams with Fritzing
 
 # Board Setup
 
