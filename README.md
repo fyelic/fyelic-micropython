@@ -15,7 +15,15 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 
 # About
 
+This collection of MicroPython examples and Raspberry Pi Pico H wiring diagrams was created for the First Year Engineering Learning & Innovation Center (FYELIC) at Northeastern University.
+
+Each example file uses singular components for ease of use, but of course can be modified to create scripts that incorporate multiple components.
+
 # How to Use
+
+For each component in the "examples" folder, there is a folder containing the sample code and a wiring diagram. The wiring diagram will help you set up your Pico and component properly to work with the given sample code.
+
+In the case that you need to use different pins, make sure you're changing the code to reflect the right pin number. Also make sure the pin number you choose is the same type of pin needed for the component.
 
 # Popular Links
 
@@ -24,6 +32,33 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
 # Pico Tips
 
 This section contains additional notes on using a Raspberry Pi Pico.
+
+## Raspberry Pi Pico H Wiring Guide
+
+![pin out diagram](reference_images/picohpinout.png)
+
+**What are the different pins for?**
+
+**Power:** The 3V3(OUT) pin provides a 3.3V power output.
+
+The VBUS (USB Power Input) is the micro-USB input voltage. So, if you’re powering the Raspberry Pi Pico via the USB port using 5V, you’ll get 5V on the VBUS pin.
+
+VSYS (External Power Input) is the main system input voltage. VSYS minimum input is 1.8V and maximum is 5.5V.
+
+**Ground:** Used to create a reference point of 0 V. Note that the AGND pin is used as Ground for an ADC.
+
+**Additional Pin Types:**
+
+| Acronym | Full Name                                   | Use Case                                                                                                    |
+| ------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| UART    | Universal Asynchronous Receiver/Transmitter | Receive and transmit data; Serial communication.                                                            |
+| GPIO    | General Purpose Input/Output                | Pins that can be configured for input or output.                                                            |
+| PWM     | Pulse Width Modulation                      | Control power delivered to device by varying width of a pulse.                                              |
+| ADC     | Analog to Digital Converter                 | Converts an analog signal (light, sound, etc.) and turns it into a digital signal.                          |
+| SPI     | Serial Peripheral Interface                 | Communication between a controller device and a peripheral device.                                          |
+| I2C     | Inter-integrated Circuit                    | Send and receive data between devices using two lines: a serial clock pin (SCL) and a serial data pin (SDA) |
+
+Need further explanation? Here's a good website with more details: [Pinout Explained](https://randomnerdtutorials.com/raspberry-pi-pico-w-pinout-gpios/)
 
 ## Using a Power Supply
 
