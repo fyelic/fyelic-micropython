@@ -1,5 +1,5 @@
 """
-Modified: 24 May 2025
+Modified: 30 May 2025
 By Maggie Lee
 
 Purpose: 
@@ -10,15 +10,15 @@ from machine import Pin, PWM
 import sys
 
 # Pin setup for right motor
-AIN1 = Pin(5, Pin.OUT)
-AIN2 = Pin(4, Pin.OUT)
-PWMA = PWM(Pin(1))
+AIN1 = Pin(3, Pin.OUT)
+AIN2 = Pin(2, Pin.OUT)
+PWMA = PWM(Pin(0))
 PWMA.freq(1000)
 
 # Pin setup for left motor
-BIN1 = Pin(9, Pin.OUT)
-BIN2 = Pin(10, Pin.OUT)
-PWMB = PWM(Pin(11))
+BIN1 = Pin(6, Pin.OUT)
+BIN2 = Pin(7, Pin.OUT)
+PWMB = PWM(Pin(8))
 PWMB.freq(1000)
 
 
