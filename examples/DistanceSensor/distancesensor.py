@@ -2,9 +2,13 @@
 Modified: 9 May 2025
 By Maggie Lee
 
-Purpose: Determine and print the distance between the ultrasonic distance sensor and an object.
-Notes : Distance calculation based on speed of sound (0.0343 cm per microsecond)
-        Divide total distance by 2 because we only want the distance between sensor to object.
+Purpose: Determine and print the distance between the ultrasonic distance 
+         sensor and an object.
+Notes : Distance calculation based on speed of sound (0.0343 cm per 
+        microsecond)
+        
+        Divide total distance by 2 because we only want the distance 
+        between sensor to object.
 
 Attributions: https://www.tomshardware.com/how-to/raspberry-pi-pico-ultrasonic-sensor
 """
@@ -12,8 +16,11 @@ Attributions: https://www.tomshardware.com/how-to/raspberry-pi-pico-ultrasonic-s
 from machine import Pin
 import utime
 
-trigger = Pin(3, Pin.OUT)  # Trigger pin sends pulse of current
-echo = Pin(2, Pin.IN)  # Echo pin receives reflected pulse
+# Set up trigger pin as an output and echo pin as input
+trigger_pin = 3
+echo_pin = 2
+trigger = Pin(trigger_pin, Pin.OUT)  # Trigger pin sends pulse of current
+echo = Pin(echo_pin, Pin.IN)  # Echo pin receives reflected pulse
 
 
 def ultra():
@@ -37,5 +44,6 @@ def ultra():
 
 
 while True:
+    # Run the sensor function
     ultra()
     utime.sleep(1)

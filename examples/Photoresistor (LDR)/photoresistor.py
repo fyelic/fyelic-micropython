@@ -13,7 +13,9 @@ Notes : Make sure the photoresistor is connected to an ADC pin.
 from machine import Pin
 import time
 
-photoresistor = machine.ADC(27)  # Set photoresistor as analog input
+# Set photoresistor as analog input
+photoresistor_pin = 27
+photoresistor = machine.ADC(photoresistor_pin)
 
 while True:
     # The ‘read_u16’ returns an unsigned 16-bit integer (between 0 and 65535).

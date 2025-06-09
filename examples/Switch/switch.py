@@ -13,7 +13,9 @@ Notes : For the three pin switch in your kit, ground the middle switch pin.
 
 from picozero import pico_led, Switch
 
-switch = Switch(15)  # Connect switch to pin 15
+# Set up switch pin
+switch_pin = 15
+switch = Switch(switch_pin)
 
 while True:
     if switch.value == True:  # ON state

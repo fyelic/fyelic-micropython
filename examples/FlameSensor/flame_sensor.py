@@ -10,13 +10,16 @@ Attributions: Modified from https://docs.sunfounder.com/projects/umsk/en/latest/
 from machine import Pin
 import time
 
-# Set GPIO 0 as an input pin to read the flame sensor state
-flame_sensor = Pin(0, Pin.IN)
+# Set up flame sensor pin as an input
+flame_sensor_pin = 0
+flame_sensor = Pin(flame_sensor_pin, Pin.IN)
 
 while True:
+    # Flame sensor state is 1 when triggered
+    # Print whether triggered or not
     if flame_sensor.value() == 1:
         print("** Fire detected!!! **")
     else:
         print("No Fire detected")
 
-    time.sleep(0.1)  # Short delay to reduce CPU usage
+    time.sleep(0.1)

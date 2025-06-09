@@ -15,12 +15,12 @@ Attributions: Modified from https://newbiely.com/tutorials/raspberry-pico/raspbe
 from machine import ADC, Pin
 import time
 
-# Define the pin connected to the FSR force sensor
+# Define the pin connected to the force sensor
 # The Raspberry Pi Pico pin GP26 (ADC0) connected to the force sensor
-FORCE_SENSOR_PIN = 26
+force_sensor_pin = 26
 
 # Initialize ADC on the specified pin
-force_sensor = ADC(Pin(FORCE_SENSOR_PIN))
+force_sensor = ADC(Pin(force_sensor_pin))
 
 # Main loop
 while True:
@@ -29,6 +29,7 @@ while True:
     # Print the raw analog reading
     print("Force sensor reading = ", analog_reading)
 
+    # Print the relative pressure
     if analog_reading < 6553:       # from 0 to 6552
         print(" -> no pressure")
     elif analog_reading < 13107:    # from 6553 to 13106

@@ -12,8 +12,12 @@ Notes : Make sure the photodiode is connected to an ADC pin.
 from machine import Pin
 import time
 
-photodiode = machine.ADC(26)  # Set photodiode as analog input
+# Set photodiode as analog input
+photodiode_pin = 26
+photodiode = machine.ADC(photodiode_pin)
 
+# Read and print photodiode raw value
 while True:
+    # The ‘read_u16’ returns an unsigned 16-bit integer (between 0 and 65535).
     print(photodiode.read_u16())
     time.sleep(2)  # 2 second delay

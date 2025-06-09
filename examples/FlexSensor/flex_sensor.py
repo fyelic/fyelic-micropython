@@ -19,10 +19,10 @@ import time
 
 # Define the pin connected to the flex sensor
 # The Raspberry Pi Pico pin GP26 (ADC0) connected to the flex sensor
-FLEX_SENSOR_PIN = 26
+flex_sensor_pin = 26
 
 # Initialize ADC on the specified pin
-flex_sensor = ADC(Pin(FLEX_SENSOR_PIN))
+flex_sensor = ADC(Pin(flex_sensor_pin))
 no_flex = 104  # Calibrate this based on reading at resting position
 
 # Main loop
@@ -33,6 +33,7 @@ while True:
     # Print the raw analog reading
     print("Flex sensor reading = ", analog_reading)
 
+    # Print flex direction
     if analog_reading < no_flex:
         print("flexed backward")
     elif analog_reading > no_flex:

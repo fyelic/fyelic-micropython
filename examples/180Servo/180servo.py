@@ -3,9 +3,9 @@ Modified: 8 May 2025
 By Maggie Lee
 
 Purpose: Change the position of a Servo between 0, 90, and 180 degrees.
-Notes : The duty cycle needs to be determined based on the specific Servo.
-        The default pulse width: 550 - 2400 ms, but read the spec sheet of
-        your Servo to determine true range (if applicable)
+Notes : The duty cycle must be determined based on the specific Servo.
+        The default pulse width is 550 - 2400 ms, but read the spec sheet of
+        your Servo to determine true range (if applicable).
         
         Duty cycle is calculated as a percentage: (pulse-width/period) * 100
         Period = 1/f, where f is the frequency in Hz (50 Hz in this example)
@@ -16,8 +16,9 @@ Attributions: https://randomnerdtutorials.com/raspberry-pi-pico-servo-motor-micr
 from machine import Pin, PWM
 from time import sleep
 
-servo_pin = machine.Pin(0)
-servo = PWM(servo_pin)
+# Setup pin as a PWM object
+servo_pin = 0
+servo = PWM(machine.Pin(servo_pin))
 
 # Set Duty Cycle for Different Angles
 # Default pulse width: 550 - 2400 ms

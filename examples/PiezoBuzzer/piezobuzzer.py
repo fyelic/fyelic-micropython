@@ -14,7 +14,10 @@ Attributions: https://www.tomshardware.com/how-to/buzzer-music-raspberry-pi-pico
 
 from machine import Pin, PWM
 from utime import sleep
-buzzer = PWM(Pin(15))
+
+# Set up pin as PWM
+buzzer_pin = 15
+buzzer = PWM(Pin(buzzer_pin))
 
 # Notes mapped to their respective frequencies
 tones = {

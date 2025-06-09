@@ -9,16 +9,24 @@ Notes : The code does not handle invalid inputs (non numbers or numbers < 0 or >
 from picozero import RGBLED
 from time import sleep
 
-rgb = RGBLED(red=0, green=1, blue=2)
+# Set up the pins for each color channel
+red_pin = 0
+green_pin = 1
+blue_pin = 2
+rgb = RGBLED(red=red_pin, green=green_pin, blue=blue_pin)
 
 while True:
+    # Red
     rgb.color = (255, 0, 0)
     sleep(0.5)
+    # Green
     rgb.color = (0, 255, 0)
     sleep(0.5)
+    # Blue
     rgb.color = (0, 0, 255)
     sleep(0.5)
 
+    # Take in three inputs to produce a chosen color
     print("Output your own color!")
     red = input("Red-ness (0-255)")
     green = input("Green-ness (0-255)")

@@ -10,7 +10,9 @@ Notes : The active buzzer plays a set sound and can be modified on or off.
 from machine import Pin
 import time
 
-buzzer = Pin(16, Pin.OUT)
+# Set up buzzer pin as an output
+buzzer_pin = 16
+buzzer = Pin(buzzer_pin, Pin.OUT)
 
 while True:
     buzzer.value(1)    # Set buzzer on

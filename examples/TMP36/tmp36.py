@@ -15,7 +15,8 @@ Notes : The sensor is polarized, so double check the wiring!
 from machine import ADC
 from time import sleep
 
-tmp36 = ADC(27)  # Set TMP36 as analog input
+# Set TMP36 as analog input
+tmp36 = ADC(27)
 
 while True:
     # The ‘read_u16’ returns an unsigned 16-bit integer (between 0 and 65535).
