@@ -131,6 +131,8 @@ Wait for the installation to complete and click **Close**.
 You don’t need to update the firmware every time you use your Raspberry Pi Pico. Next time, you can just plug it into your computer without pressing the ‘BOOTSEL’ button.
 
 Before code is written, the Picozero library should be added to Thonny. 
+
+Go to Tools --> Manage Packages.
 ![thonny tools bar](reference_images/thonnytools.png)
 
 A menu that looks like this should open up:
