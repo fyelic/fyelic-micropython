@@ -12,6 +12,7 @@ This code is for a Raspberry Pi Pico and assumes prior setup of the microcontrol
   - [Using a Power Supply](#using-a-power-supply)
   - [Wiring Diagrams with Fritzing](#wiring-diagrams-with-fritzing)
 - [Board Setup](#board-setup)
+  - [Wiring on the Breadboard](#wiring-on-the-breadboard)
 
 # About
 
@@ -208,3 +209,16 @@ Choose either save option, but make sure that your filename ends with the `.py` 
 **Debug:** If you get an error saying the device is busy, you need to first ‘Stop’ 🛑 the program running on the Pico.
 
 You've officially set up your Raspberry Pi Pico and Thonny! To start working on your projects, refer back to the [Table of Contents](#table-of-contents)
+
+## Wiring on the Breadboard
+Breadboards are a way of making connections between the microcontroller and components. 
+
+Breadboards are said to be **Bussed**, meaning that placing wires in specific patterns connects either that entire row or column of holes.
+
+<img width="512" height="855" alt="Image" src="https://github.com/user-attachments/assets/b5308d06-2fba-4484-a90b-535c9f6094c6" />
+ 
+At the very left and right of your breadboard, you will see a long red line with a + symbol and either a blue or black line with a - symbol. Though these buses are not innately positive or negative, it makes the wiring much less complicated if you stick to these positive and negative wiring conventions by connecting the red line to power and the blue/black line to ground. Some breadboards have a break in the middle of the red and blue/black lines, meaning that the breadboard is no longer bussed across that break.
+
+Between the positive and negative buses are the horizontal rows, labeled a-e and f-j. If there is a wire connected to a row, that current will run through the entire row up until the midpoint of the board (i.e. the separation between row e and f). 
+
+A majority of components included in your kit are breadboard friendly and can easily be connected. That being said, some components may not fit; in this case, a male-female wire can be used. Simply connect the female end of the wire to the pin on the component and connect the male end to the corresponding hole on the breadboard. 
