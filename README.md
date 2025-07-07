@@ -130,6 +130,16 @@ Wait for the installation to complete and click **Close**.
 
 You don’t need to update the firmware every time you use your Raspberry Pi Pico. Next time, you can just plug it into your computer without pressing the ‘BOOTSEL’ button.
 
+Before code is written, the Picozero library should be added to Thonny. 
+![thonny tools bar](reference_images/thonnytools.png)
+
+A menu that looks like this should open up:
+![thonny manage packages](reference_images/thonnymanagepackages.png)
+
+Look up picozero in the Search Bar and select the top option in Search Results. On the picozero page, click **Install** and close the menu.
+
+
+
 ## Blink the Onboard LED.
 
 Use the Thonny Shell to run some simple Python code on your Raspberry Pi Pico.
@@ -157,13 +167,6 @@ After entering the code, the Shell should look like this:
 If everything is done properly, the board should look like this:
 ![pico with led on](reference_images/picoledon.jpg)
 
-If you're getting an error with picozero, go to the Tools bar and select manage packages.
-![thonny tools bar](reference_images/thonnytools.png)
-
-A menu that looks like this should open up:
-![thonny manage packages](reference_images/thonnymanagepackages.png)
-
-Look up picozero in the Search Bar and select the top option in Search Results. On the picozero page, click **Install** and close the menu.
 
 To turn off the LED, you can enter this line in the Shell:
 
