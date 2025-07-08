@@ -1,6 +1,11 @@
+# About
+
+This collection of MicroPython examples and Raspberry Pi Pico H wiring diagrams was created for the First Year Engineering Learning & Innovation Center (FYELIC) at Northeastern University.
+
+Each example file uses singular components for ease of use, but of course can be modified to create scripts that incorporate multiple components.
+
 # Table of Contents
 
-- [About](#about)
 - [How to Use](#how-to-use)
 - [Popular Links](#popular-links)
 - [Download Instructions](#download-instructions)
@@ -8,12 +13,6 @@
   - [Using a Power Supply](#using-a-power-supply)
   - [Wiring Diagrams with Fritzing](#wiring-diagrams-with-fritzing)
 - [Board Setup](#board-setup)
-
-# About
-
-This collection of MicroPython examples and Raspberry Pi Pico H wiring diagrams was created for the First Year Engineering Learning & Innovation Center (FYELIC) at Northeastern University.
-
-Each example file uses singular components for ease of use, but of course can be modified to create scripts that incorporate multiple components.
 
 # How to Use
 
