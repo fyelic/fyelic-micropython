@@ -27,6 +27,10 @@ In the case that you need to use different pins, make sure you're changing the c
 
 # Popular Links
 
+https://lastminuteengineers.com/
+https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico 
+https://randomnerdtutorials.com/projects-raspberry-pi-pico/ 
+
 # Download Instructions
 
 # Pico Tips
