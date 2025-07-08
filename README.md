@@ -1,7 +1,3 @@
-# Getting Started
-
-This code is for a Raspberry Pi Pico and assumes prior setup of the microcontroller and Thonny IDE. If you haven't done so yet, please refer to [Board Setup](#board-setup).
-
 # Table of Contents
 
 - [About](#about)
