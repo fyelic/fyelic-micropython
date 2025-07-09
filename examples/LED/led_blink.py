@@ -10,7 +10,7 @@ Notes : LEDs are polarized! The longer end (+) should be connected to the pin
         To control the blink timing, use led_on_off.py instead.
 """
 
-from picozero import LED
+from machine import LED
 
 # Set LED pin to correct number
 led_pin = 15
