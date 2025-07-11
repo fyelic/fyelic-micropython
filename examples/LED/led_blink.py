@@ -1,6 +1,7 @@
 """
 Modified: 30 Apr 2025
 By Maggie Lee
+Edited by Caroline Vooss
 
 Purpose: Blink an LED on and off.
 Notes : LEDs are polarized! The longer end (+) should be connected to the pin
@@ -10,11 +11,14 @@ Notes : LEDs are polarized! The longer end (+) should be connected to the pin
         To control the blink timing, use led_on_off.py instead.
 """
 
-from machine import LED
+from machine import Pin #Tells the code you want to import input/output pins
+import time
 
-# Set LED pin to correct number
-led_pin = 15
-led = LED(led_pin)
+led_pin = 15 # Set LED pin to correct number
+led = Pin(led_pin, Pin.OUT) #sets pin 15 as an output pin
 
 while True:
-    led.blink()  # LED in blink mode
+    led.on()
+    time.sleep(1)
+    led.off()
+    time.sleep(1)
