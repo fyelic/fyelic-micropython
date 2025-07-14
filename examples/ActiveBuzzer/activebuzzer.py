@@ -11,7 +11,7 @@ from machine import Pin
 import time
 
 # Set up buzzer pin as an output
-buzzer_pin = 16
+buzzer_pin = 0
 buzzer = Pin(buzzer_pin, Pin.OUT)
 
 while True:
