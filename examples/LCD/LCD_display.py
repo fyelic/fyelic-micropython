@@ -7,7 +7,6 @@ Notes: Two libraries need to be installed prior to running code:
 Look for [pico_i2c_lcd.py] and [lcd_api.py] and save to Raspberry Pi.
 '''
 
-from picozero import LED
 from machine import I2C, Pin
 from pico_i2c_lcd import I2cLcd
 from time import sleep
