@@ -13,7 +13,7 @@ from time import sleep
 
 tilt = Pin(0, Pin.IN, Pin.PULL_UP)
 
-led = Pin(25, Pin.OUT)
+led = Pin(1, Pin.OUT)
 
 while True:
     led.value(tilt.value())
