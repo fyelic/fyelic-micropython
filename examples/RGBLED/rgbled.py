@@ -10,9 +10,9 @@ from machine import Pin, PWM
 import time
 
 # Set up RGB LED pins (adjust pin numbers as needed)
-red_pin = 18
-green_pin = 19
-blue_pin = 20
+red_pin = 0
+green_pin = 1
+blue_pin = 2
 
 # Create PWM objects for each color channel
 red_led = PWM(Pin(red_pin))
