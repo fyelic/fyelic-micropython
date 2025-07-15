@@ -4,7 +4,7 @@ Modified 9 July 2025
 By Caroline Vooss
 
 Purpose: Test a thermistor to measure the temperature of a room in Celsius and Kelvin
-Attributes: Lafvin Thermistor Tutorial
+Attribuions: Lafvin Thermistor Tutorial
 
 """
 import machine
