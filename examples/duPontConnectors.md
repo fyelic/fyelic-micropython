@@ -1,5 +1,5 @@
 # FYELIC DuPont Connector Covers
-Our 3D Printed DuPont covers are great for organizing wires and ensuring a secure connection between male andfemale ends. 
+Our 3D Printed DuPont covers are great for organizing wires and ensuring a secure connection between male and female ends. 
 Currently, there are 2, 4, 6, and 8-wire covers available at FYELIC. 
 Talk to a Red Vest to check one out. 
 
