@@ -1,4 +1,4 @@
-POWER MODULE NOTES
+## Power Module Notes
 - The positive and negative pins on the power module must match the power rails on the breadboard, and both sides need to fit snugly.
 - Compatibility with 4 AA batteries connected to a power jack
 - The power module makes it so you can run a file on the Pi Pico without a computer being attached to it
