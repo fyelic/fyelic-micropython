@@ -7,9 +7,10 @@ If you need to cover an odd number of wires, you can size up and the wires will 
 
 ### Steps for covering DuPont wires
 1. Attach the male and female ends of the wires
-![duPont wires connected](reference_images/compressed/Wires1.png)
-3. Place the connected wires in the DuPont wire cover
-4. Close the lid of the cover until you hear a "click"
+2. Place the connected wires in the DuPont wire cover
+3. Close the lid of the cover until you hear a "click"
+
+_Images for these steps can be found in reference_images --> compressed_
 
 That's it! Feel free to come to FYELIC to try one for yourself. 
 
