@@ -25,7 +25,7 @@ servo = PWM(machine.Pin(servo_pin))
 # Duty cycle (%) = (pulsewidth/period)*100
 max_duty = 7864
 min_duty = 1802
-half_duty = int(max_duty/2)
+half_duty = int((max_duty+min_duty)/2)
 
 # Set PWM frequency
 frequency = 50
