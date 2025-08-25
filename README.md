@@ -131,85 +131,16 @@ Wait for the installation to complete and click **Close**.
 
 You don’t need to update the firmware every time you use your Raspberry Pi Pico. Next time, you can just plug it into your computer without pressing the ‘BOOTSEL’ button.
 
-Before code is written, the Picozero library should be added to Thonny. 
-
-Go to Tools --> Manage Packages.
-![thonny tools bar](reference_images/thonnytools.png)
-
-A menu that looks like this should open up:
-![thonny manage packages](reference_images/thonnymanagepackages.png)
-
-Look up picozero in the Search Bar and select the top option in Search Results. On the picozero page, click **Install** and close the menu.
-
-
-
-## Blink the Onboard LED.
-
-Use the Thonny Shell to run some simple Python code on your Raspberry Pi Pico.
-
-Make sure that your Raspberry Pi Pico is connected to your computer and you have selected the MicroPython (Raspberry Pi Pico) interpreter.
-
-![change interpreter](reference_images/changeinterpreter.png)
-
-Look at the Shell panel at the bottom of the Thonny editor.
-
-You should see something like this:
-![shell panel](reference_images/shellstartup.png)
-
-Enter this code in the Shell, making sure you tap Enter after each line.
-
-```
-from picozero import pico_led
-
-pico_led.on()
-```
-
-After entering the code, the Shell should look like this:
-![shell code for led on](reference_images/picoledonshell.png)
-
-If everything is done properly, the board should look like this:
-![pico with led on](reference_images/picoledon.jpg)
-
-
-To turn off the LED, you can enter this line in the Shell:
-
-```
-pico_led.off()
-```
-
-## Write a longer program.
-
-The Shell is useful to make sure everything is working and try out quick commands. However, it’s better to put longer programs in a file.
-
-Thonny can save and run MicroPython programs directly on your Raspberry Pi Pico.
-
-Create a MicroPython program to blink the onboard LED on and off in a loop.
-
-Click in the main editor pane of Thonny.
-![thonny main editor](reference_images/thonnymaineditor.png)
-
-Enter this code into the main editor:
-
-```
-from picozero import pico_led
-
-while True:
-    pico_led.blink()
-```
-
-Click **Run** (the green play button) and the LED will blink on and off.
-
-Click the **Stop** (the red stop sign) button.
-
 ## Save your program to your Pico
 
-Make sure you have Stopped the program, then click the ‘Save’ icon, or choose ‘Save’ from the ‘File’ menu.
+Click the ‘Save’ icon, or choose ‘Save’ from the ‘File’ menu when you are ready to save a program.
 
 Thonny will give you the option to save the file on **This computer**, or the **Raspberry Pi Pico**.
 
 ![save options](reference_images/saveoptions.png)
 
-Choose either save option, but make sure that your filename ends with the `.py` extension so that it's recognized as a Python file.
+Choose either save option, but make sure that your filename ends with the `.py` extension so that it's recognized as a Python file. 
+If you want the program to run automatically when the Pico is connected to a power source (not necessarily a computer), save the file as "main.py" to the Pico.
 
 **Debug:** If you get an error saying the device is busy, you need to first ‘Stop’ 🛑 the program running on the Pico.
 
