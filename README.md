@@ -132,6 +132,7 @@ Wait for the installation to complete and click **Close**.
 You don’t need to update the firmware every time you use your Raspberry Pi Pico. Next time, you can just plug it into your computer without pressing the ‘BOOTSEL’ button.
 
 ## Save your program to your Pico
+To save to the Pico you need to make sure the Pico is selected in the lower right hand corner
 
 Click the ‘Save’ icon, or choose ‘Save’ from the ‘File’ menu when you are ready to save a program.
 
