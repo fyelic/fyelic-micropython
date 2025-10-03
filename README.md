@@ -120,9 +120,9 @@ Click the Python interpreter and select Install MicroPython.
 
 ![install MicroPython](reference_images/installmicropython.png)
 
-A dialog box will pop up to install the latest version of the MicroPython firmware on your Raspberry Pi Pico.
+A dialog box will pop up to install the latest version of the MicroPython firmware on your Raspberry Pi Pico. When downloading MicroPython, you must choose the correct variant that corresponds to your Pico variant. For example, if you identified your Pico as the H model, you must select the Pi Pico H model when downloading MicroPython as shown below. 
 
-Select the variant and the version should be the latest, so leave it set at that. FYELIC uses Raspberry Pi Pico H.
+Select the variant and the version should be the latest, so leave it set at that. 
 ![select variant](reference_images/selectvariant.png)
 
 Click the **Install** button to copy the firmware to your Raspberry Pi Pico.
