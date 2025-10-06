@@ -1,60 +1,83 @@
 """
-Modified: 30 May 2025
-By Maggie Lee
-
+Robot sample code
+By Caroline Vooss
+Purpose: Run two motors simultaneously. This should make the robot move forwards or backwards.
+Last edited on October 6 2025
 """
 from machine import Pin, PWM
-import sys
+from utime import sleep
 
-# Pin setup for right motor
-AIN1 = Pin(3, Pin.OUT)
-AIN2 = Pin(2, Pin.OUT)
-PWMA = PWM(Pin(0))
-PWMA.freq(1000)
+# Pin setup for TB6612 motor driver
+ina1 = Pin(18, Pin.OUT)
+ina2 = Pin(17, Pin.OUT)
+inb1=Pin(14, Pin.OUT)
+inb2=Pin(13, Pin.OUT)
 
-# Pin setup for left motor
-BIN1 = Pin(6, Pin.OUT)
-BIN2 = Pin(7, Pin.OUT)
-PWMB = PWM(Pin(8))
-PWMB.freq(1000)
+pwma = PWM(Pin(16))
+pwma.freq(1000)
+pwmb=PWM(Pin(15))
+pwmb.freq(1000)
 
+def RotateCW(duty):
+    """Rotate motor clockwise at specified duty cycle (0-100)"""
+    ina1.value(1)
+    ina2.value(0)
+    inb1.value(0)
+    inb2.value(1)
+    
+    duty_16 = int((duty * 65536) / 100)
+    pwma.duty_u16(duty_16)
+    pwmb.duty_u16(duty_16)
 
-def set_motor(speed, in1, in2, pwm):
-    if speed > 0:
-        in1.high()
-        in2.low()
-    elif speed < 0:
-        in1.low()
-        in2.high()
-    else:
-        in1.low()
-        in2.low()
+def RotateCCW(duty):
+    """Rotate motor counter-clockwise at specified duty cycle (0-100)"""
+    ina1.value(0)
+    ina2.value(1)
+    inb1.value(1)
+    inb2.value(0)
+    duty_16 = int((duty * 65536) / 100)
+    pwma.duty_u16(duty_16)
+    pwmb.duty_u16(duty_16)
+    
+def StopMotor():
+    """Stop the motor completely"""
+    ina1.value(0)
+    ina2.value(0)
+    inb1.value(0)
+    inb2.value(0)
+    pwma.duty_u16(0)
+    pwmb.duty_u16(0)
+print("DC Motor Control - Enter duty cycle values between 0-100")
+print("The motor will rotate CW for 5s, then CCW for 5s, then stop")
+print("Press Ctrl+C to exit\n")
 
-    # Convert -65535 to 65535 range to 0-65535 for PWM
-    pwm.duty_u16(min(abs(speed), 65535))
-
-
-def right_motor(speed):
-    set_motor(speed, AIN1, AIN2, PWMA)
-
-
-def left_motor(speed):
-    set_motor(speed, BIN1, BIN2, PWMB)
-
-# Helper to get input from serial (USB)
-
-
-def get_serial_input():
-    serial = input("Enter motor speed (-65535 to 65535): ")
-    try:
-        return int(serial)
-    except ValueError:
-        return 0
-
-
-# Main loop
 while True:
-    motor_speed = get_serial_input()
-    print("Motor Speed:", motor_speed)
-    right_motor(motor_speed)
-    left_motor(motor_speed)
+    try:
+        duty_cycle = float(input("Enter PWM duty cycle (0-100): "))
+        
+        # Validate input range
+        if 0 <= duty_cycle <= 100:
+            print(f"Running at {duty_cycle}% duty cycle")
+            
+            # Rotate clockwise
+            print("  → Rotating Forward...")
+            RotateCW(duty_cycle)
+            sleep(5)
+            
+            # Rotate counter-clockwise
+            print("  → Rotating Backward...")
+            RotateCCW(duty_cycle)
+            sleep(5)
+            
+            # Stop motor
+            print("  → Stopping motor\n")
+            StopMotor()
+        else:
+            print("Please enter a value between 0 and 100\n")
+            
+    except ValueError:
+        print("Invalid input - please enter a number\n")
+    except KeyboardInterrupt:
+        print("\n\nStopping motor and exiting...")
+        StopMotor()
+        break
