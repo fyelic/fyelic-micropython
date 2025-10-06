@@ -2,9 +2,6 @@
 Modified: 30 May 2025
 By Maggie Lee
 
-Purpose: 
-Notes : IGNORE FOR NOW THIS IS BUGGY
-
 """
 from machine import Pin, PWM
 import sys
