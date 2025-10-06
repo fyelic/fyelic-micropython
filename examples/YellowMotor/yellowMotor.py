@@ -9,14 +9,12 @@ Attributions: https://c2plabs.com/blog/2021/09/12/controlling-dc-motor-using-ras
 from machine import Pin , PWM
 from utime import sleep
 
-led = Pin(25,Pin.OUT)
 ina1 = Pin(18,Pin.OUT)
 ina2 = Pin(17, Pin.OUT)
 pwma = PWM(Pin(16))
 
 pwma.freq(1000)
 
-led.toggle()
 
 
 def RotateCW(duty):
