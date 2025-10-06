@@ -3,36 +3,45 @@
 By Caroline Vooss
 Edited on October 6, 2025
 Purpose: Control a single motor. Requires a motor driver chip.
-Attributions: https://www.kevsrobots.com/learn/micropython_gpio/07_motors.html
+Attributions: https://c2plabs.com/blog/2021/09/12/controlling-dc-motor-using-raspberry-pi-pico-rp2040-and-tb6612fng/
 -------------------------------
 """
-from machine import Pin, PWM
-from time import sleep
+from machine import Pin , PWM
+from utime import sleep
 
-# Motor control pins
-in1 = Pin(0, Pin.OUT)
-in2 = Pin(1, Pin.OUT)
-ena = PWM(Pin(2))
-ena.freq(1000)
+led = Pin(25,Pin.OUT)
+ina1 = Pin(18,Pin.OUT)
+ina2 = Pin(17, Pin.OUT)
+pwma = PWM(Pin(16))
 
-def motor_forward(speed=65025):
-    in1.high()
-    in2.low()
-    ena.duty_u16(speed)
+pwma.freq(1000)
 
-def motor_backward(speed=65025):
-    in1.low()
-    in2.high()
-    ena.duty_u16(speed)
+led.toggle()
 
-def motor_stop():
-    in1.low()
-    in2.low()
-    ena.duty_u16(0)
 
-# Test
-motor_forward()
-sleep(2)
-motor_backward()
-sleep(2)
-motor_stop()
+def RotateCW(duty):
+    ina1.value(1)
+    ina2.value(0)
+    duty_16 = int((duty*65536)/100)
+    pwma.duty_u16(duty_16)
+
+def RotateCCW(duty):
+    ina1.value(0)
+    ina2.value(1)
+    duty_16 = int((duty*65536)/100)
+    pwma.duty_u16(duty_16)
+    
+def StopMotor():
+    ina1.value(0)
+    ina2.value(0)
+    pwma.duty_u16(0)
+    
+
+while True:
+    duty_cycle=float(input("Enter pwm duty cycle"))
+    print (duty_cycle)
+    RotateCW(duty_cycle)
+    sleep(5)
+    RotateCCW(duty_cycle)
+    sleep(5)
+    StopMotor()
