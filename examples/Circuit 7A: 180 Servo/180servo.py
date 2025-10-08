@@ -4,7 +4,7 @@ By Maggie Lee
 
 Purpose: Change the position of a Servo between 0, 90, and 180 degrees.
 Notes : The duty cycle must be determined based on the specific Servo.
-        The default pulse width is 550 - 2400 ms, but read the spec sheet of
+        The default pulse width is 550 - 2400 microseconds, but read the spec sheet of
         your Servo to determine true range (if applicable).
         
         Duty cycle is calculated as a percentage: (pulse-width/period) * 100
