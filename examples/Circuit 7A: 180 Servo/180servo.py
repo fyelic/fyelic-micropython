@@ -1,6 +1,8 @@
 """
-Modified: 8 May 2025
+Created: 8 May 2025
+Last Modified: 14 October 2025
 By Maggie Lee
+Edited by Caroline Vooss
 
 Purpose: Change the position of a Servo between 0, 90, and 180 degrees.
 Notes : The duty cycle must be determined based on the specific Servo.
