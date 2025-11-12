@@ -79,26 +79,26 @@ print("Press Ctrl+C to stop")
 # Keep track of previous button state to reduce console spam
 previous_buttons = (False, False, False)
 
-    while True:
-        # Read current button states
-        current_buttons = read_buttons()
+while True:
+    # Read current button states
+    current_buttons = read_buttons()
+    
+    # Only update if button state changed
+    if current_buttons != previous_buttons:
+        # Get frequency for this button combination
+        frequency = notes.get(current_buttons, 0)
         
-        # Only update if button state changed
-        if current_buttons != previous_buttons:
-            # Get frequency for this button combination
-            frequency = notes.get(current_buttons, 0)
-            
-            # Play the note
-            play_note(frequency)
-            
-            # Print current note (optional - comment out if too much output)
-            note_name = get_note_name(current_buttons)
-            if frequency > 0:
-                print(f"Playing: {note_name} ({frequency} Hz)")
-            else:
-                print("Silence")
-            
-            # Update previous state
-            previous_buttons = current_buttons
+        # Play the note
+        play_note(frequency)
         
-        time.sleep(0.05)  # Small delay for responsive but not overwhelming updates
+        # Print current note (optional - comment out if too much output)
+        note_name = get_note_name(current_buttons)
+        if frequency > 0:
+            print(f"Playing: {note_name} ({frequency} Hz)")
+        else:
+            print("Silence")
+        
+        # Update previous state
+        previous_buttons = current_buttons
+    
+    time.sleep(0.05)  # Small delay for responsive but not overwhelming updates
