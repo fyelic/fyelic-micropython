@@ -44,7 +44,7 @@ while True:
         
         # Validate input range
         if 0 <= duty_cycle <= 100:
-            print(f"Running at {duty_cycle}% duty cycle")
+            print(f"Running at {str(duty_cycle)}% duty cycle")
             
             # Rotate clockwise
             print("  → Rotating CW...")
