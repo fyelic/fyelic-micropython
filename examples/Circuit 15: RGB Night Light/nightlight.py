@@ -72,7 +72,7 @@ while True:
     hue = int(pot_value * 360 / 65535)
     
     # Check if it's dark enough to activate nightlight
-    if light_level < LIGHT_THRESHOLD:
+    if light_level > LIGHT_THRESHOLD:
         # It's dark - turn on the nightlight
         r, g, b = hue_to_rgb(hue)
         set_rgb_color(r, g, b)
