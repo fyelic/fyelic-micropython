@@ -10,7 +10,7 @@ Notes : Make sure the photoresistor is connected to an ADC pin.
         Pico's ADC is 12 bits, so the digital signal resolution is 4096 units.
 """
 
-from machine import Pin
+from machine import ADC
 import time
 
 # Set photoresistor as analog input
